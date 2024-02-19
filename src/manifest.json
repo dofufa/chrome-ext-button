@@ -3,6 +3,15 @@
   "version": "0.1",
   "description": "ext-button",
 
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+ "action": {
+    "default_title": "Action Button"
+  },
+
   "icons": {
     "16": "icon/icon16.png",
     "32": "icon/icon32.png",
@@ -11,20 +20,19 @@
   },
 
   "background": {
-    "service_worker": "js/bg.js"
+    "service_worker": "/js/bg.js"
   },
 
   "content_scripts": [
     {
       "js": [
-       "jq/jquery-3.7.1.min.js",
-        "js/ext.js"
+        "/jq/jquery-3.7.1.min.js",
+        "/js/ext.js"
        ],
 
       "matches": [
-        "https://www.youtube.com/watch*",
-        "https://www.youtube.com/embed/*"
-      ]
+        "https://labs.dofufa.com/*"
+       ]
     }
   ],
 
